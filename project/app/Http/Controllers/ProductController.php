@@ -1,16 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function show(int $id): string
+    public function show(int $id): View
     {
-        return '<h1>Fiche du produit ' . $id . '</h1>';
+        return view('product-details', ['id' => $id]);
     }
 
-    public function list(): string
+    public function list(): View
     {
-        return '<h1>Liste des produits</h1>';
+        return view('product-list');
     }
 }

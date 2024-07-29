@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\View\View;
 
 class CartController extends Controller
 {
-    public function show(): string
+    public function show(): View
     {
-        return '<h1>Cart</h1>';
+        return view('cart');
     }
 }
