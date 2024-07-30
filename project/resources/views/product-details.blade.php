@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('components.header')
 
-    <title>Homepage</title>
-    <link rel="stylesheet" href="../css/app.css">
-</head>
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<div class="containerBasic">
+    <h1>Product {{$id}} </h1>
+    <div class="containerText">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab corporis harum inventore nam nihil, nisi omnis praesentium voluptas voluptate voluptatibus! Amet dicta error ex fugit ipsum nulla repellat sed totam.</p>
+    </div>
+</div>
 
-<h1>Product</h1>
-<p>ID: {{$id}} </p>
-
-</body>
-</html>
+@include('components.footer')

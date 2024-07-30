@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Lilita+One&family=Poetsen+One&display=swap');
+
+:root {
+    --main-color: #f1e4c3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Lilita One", sans-serif;
+    text-decoration: none;
+}
+
+body, html {
+    height: 100vh;
+    font-family: Poppins-Regular, sans-serif;
+    background-color: #f1e4c3;
+}
+
+body a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+header
+{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #597e52;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.logo
+{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img
+{
+    width: 40px;
+    margin-right: 3px;
+    transition: all .50 ease;
+}
+
+.logo span
+{
+    color: #f1e4c3;
+    font-size: 1.2rem;
+    transition: all .50 ease;
+}
+
+.navbar
+{
+    display: flex;
+    margin-top: 15px;
+}
+
+.navbar a
+{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover
+{
+    color: var(--main-color);
+}
+
+.navbar a.active
+{
+    color: var(--main-color);
+}
+
+.main
+{
+    display: flex;
+    align-items: center;
+}
+
+.main a
+{
+    margin-right: 25px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.main a:hover
+{
+    color: var(--main-color);
+}
+
+#menu-icon
+{
+    font-size: 35px;
+    color: #000;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.container {
+    margin-top: 180px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBasic {
+    margin-top: 180px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 600px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px darkgrey;
+}
+
+.container h1 {
+    color: #917a48;
+    font-weight: lighter;
+}
+
+.containerBasic h1 {
+     color: #917a48;
+     font-weight: lighter;
+ }
+
+.containerText {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    justify-content: flex-end;
+}
+
+.containerText p {
+    margin-top: 20px;
+    font-family: "Segoe UI";
+    font-size: 20px;
+}
+
+.actionButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+.footer {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+    background-color: #597e52;
+    margin-top: 50px;
+}
+
+.footer .contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 150px;
+    line-height: 30px;
+}
+
+.contain h1 {
+    color: #f1e4c3;
+    font-weight: lighter;
+}
+
+.contain li {
+    font-family: "Segoe UI";
+    font-weight: bolder;
+}
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #597e52;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: "Segoe UI";
+    font-size: 15px;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 15px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+@media only screen and (max-width: 1350px) {
+
+    /* MOBILE MENU */
+
+    header
+    {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .navbar a
+    {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1090px) {
+
+    /* MOBILE MENU */
+
+    #menu-icon
+    {
+        display: block;
+    }
+
+    .navbar
+    {
+        position: absolute;
+        top: 60%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: all .50s ease;
+    }
+
+    .navbar a
+    {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        color: #fff;
+        transition: all .50 ease;
+    }
+
+    .navbar a:hover
+    {
+        color: wheat;
+        transform: translateX(7px);
+    }
+
+    .navbar a.active
+    {
+        color: wheat;
+    }
+
+    .navbar.open
+    {
+        right: 2%;
+    }
+
+    .logo img
+    {
+        margin-left: 10px;
+        width: 30px;
+        transition: all .50s ease;
+    }
+
+    .logo span
+    {
+        font-size: 1.1rem;
+        transition: all .50s ease;
+    }
+
+    .main a
+    {
+        margin-right: 15px;
+        margin-left: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all .50s ease;
+    }
+}
