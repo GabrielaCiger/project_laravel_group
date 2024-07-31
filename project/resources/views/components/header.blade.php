@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <title>Homepage</title>
-</head>
-<body>
-
 <header>
     <a href="" class="logo"><img src="{{ asset('images/monstera.png') }}" alt=""> <span>Gaby's plant shop</span></a>
 

@@ -1,4 +1,5 @@
-
+@extends('components.html')
+@section('title', 'Home')
 @include('components.header')
 
     <div class="container">

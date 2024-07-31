@@ -1,3 +1,5 @@
+@extends('components.html')
+@section('title', "Product {$id}")
 @include('components.header')
 
 <div class="containerBasic">

@@ -1,4 +1,7 @@
+@extends('components.html')
+@section('title', 'Cart')
 @include('components.header')
+
 
 <div class="containerBasic">
     <h1>Cart</h1>
