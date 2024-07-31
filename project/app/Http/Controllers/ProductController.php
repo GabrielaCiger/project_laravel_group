@@ -5,13 +5,20 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function show(int $id): View
+    public function show(string $id): View
     {
         return view('product-details', ['id' => $id]);
     }
 
     public function list(): View
     {
-        return view('product-list');
+        $plants = [
+          'Monstera',
+          'Caladium',
+          'Syngonium',
+          'Alocasia',
+          'Pilea'
+        ];
+        return view('product-list', ['plants' => $plants]);
     }
 }
