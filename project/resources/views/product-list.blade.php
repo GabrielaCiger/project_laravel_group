@@ -6,6 +6,7 @@
 <h1 class="title">Our products</h1>
 <div class="containerCatalog">
         @foreach($plants as $plant)
+        <form action="/product/{{ $plant->id }}" method="get">
             <ul>
                 <div class="cardPlant">
                     <img src="{{$plant->imageUrl}}" alt="Image">
@@ -18,15 +19,13 @@
                             <b>Category:</b>
                             <p>{{$plant->category}}</p>
                         </div>
-                        <div class="info-item">
-                            <b>Price:</b>
-                            <p>{{$plant->price}}€</p>
-                        </div>
                     </div>
-                    <button class='btn' type="submit"><span>Buy!</span></button>
+                    <button class='btn' type="submit"><span>See details</span></button>
                 </div>
             </ul>
+        </form>
         @endforeach
-    </div>
+</div>
+</body>
 
 @include('components.footer')

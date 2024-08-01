@@ -125,7 +125,6 @@ header
 }
 
 .container {
-    margin-top: 150px;
     margin-right: 100px;
     margin-left: 100px;
     margin-bottom: 50px;
@@ -261,104 +260,13 @@ button:hover span:after {
     right: 0;
 }
 
-@media only screen and (max-width: 1350px) {
-
-    /* MOBILE MENU */
-
-    header
-    {
-        padding: 14px 2%;
-        transition: .2s;
-    }
-
-    .navbar a
-    {
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-
-}
-
-@media only screen and (max-width: 1090px) {
-
-    /* MOBILE MENU */
-
-    #menu-icon
-    {
-        display: block;
-    }
-
-    .navbar
-    {
-        position: absolute;
-        top: 60%;
-        right: -100%;
-        width: 270px;
-        height: 29vh;
-        background-color: var(--main-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        transition: all .50s ease;
-    }
-
-    .navbar a
-    {
-        display: block;
-        margin: 12px 0;
-        padding: 0 25px;
-        color: #fff;
-        transition: all .50 ease;
-    }
-
-    .navbar a:hover
-    {
-        color: wheat;
-        transform: translateX(7px);
-    }
-
-    .navbar a.active
-    {
-        color: wheat;
-    }
-
-    .navbar.open
-    {
-        right: 2%;
-    }
-
-    .logo img
-    {
-        margin-left: 10px;
-        width: 30px;
-        transition: all .50s ease;
-    }
-
-    .logo span
-    {
-        font-size: 1.1rem;
-        transition: all .50s ease;
-    }
-
-    .main a
-    {
-        margin-right: 15px;
-        margin-left: 5px;
-        font-size: 1rem;
-        font-weight: 600;
-        transition: all .50s ease;
-    }
-}
-
 .containerText ul {
     line-height: 2vw;
     font-size: 20px;
 }
 
 .wrapper{
+    margin-top: 140px;
     font-family: "Segoe UI";
     width: 420px;
     background: transparent;
@@ -441,8 +349,6 @@ button:hover span:after {
     font-size: 20px;
     color: #333;
 }
-
-
 
 .cardPlant .btn span {
     font-weight: bold;
@@ -569,4 +475,87 @@ button:hover span:after {
     text-shadow: 0 0 1px #333333;
     font-weight: 200;
     text-align: center;
+}
+
+.detail {
+    background-image: url("images/leaves.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.containerCatalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerDetail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 100%;
+}
+
+.details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+    font-weight: lighter;
+}
+
+.details p {
+    color: #777;
+    margin: 0 0 20px;
+}
+
+.customer-info {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-item b {
+    color: #333;
+    font-weight: lighter;
+}
+
+.info-item p {
+    margin: 0;
+    color: #777;
 }

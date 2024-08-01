@@ -3,13 +3,13 @@
 @include('components.header')
 
 <body>
-    <div class="container">
+    <div class="container" style="margin-top: 150px">
         <img src="{{ asset('images/monst.jpg') }}" alt="">
         <div class="containerText">
         <h1>Wide Variety of Plants</h1>
         <p>Discover our extensive collection of indoor and outdoor plants, perfect for any space and skill level. From lush green ferns to vibrant flowering plants, we have something to suit every taste and environment. Our plants are carefully curated to ensure they thrive in your home or garden, bringing a touch of nature's beauty into your life.</p>
             <div class="actionButton">
-                <a href="/product"><button><span>Check it now!</span></button></a>
+                <a href="/products"><button class="btn"><span>Check it now!</span></button></a>
             </div>
         </div>
     </div>
