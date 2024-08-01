@@ -125,15 +125,26 @@ header
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 150px;
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: -50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCatalog{
+    margin-top: 15px;
+    margin-left: 10vh;
+    margin-right: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     min-height: 100%;
+    flex-wrap: wrap;
 }
 
 .containerBasic {
@@ -217,7 +228,6 @@ button {
     color: #FFFFFF;
     text-align: center;
     font-size: 17px;
-    padding: 16px;
     width: 140px;
     transition: all 0.5s;
     cursor: pointer;
@@ -432,6 +442,12 @@ button:hover span:after {
     color: #333;
 }
 
+
+
+.cardPlant .btn span {
+    font-weight: bold;
+}
+
 .wrapper .register-link{
     font-size: 14.5px;
     text-align: center;
@@ -461,7 +477,42 @@ button:hover span:after {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
+.cardPlant{
+    width: 350px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 50px;
+}
+.cardPlant > .btn {
+    font-family: "Lilita One", sans-serif;
+    width: 60%;
+    height: 30px;
+    background: #597d52;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #f1e4c3;
+    margin-top: 10px;
+}
+
 .card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.cardPlant img{
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -476,6 +527,18 @@ button:hover span:after {
 }
 
 .card .details p{
+    font-family: "Segoe UI";
+    font-weight: 600;
+}
+
+.cardPlant .details{
+    margin: 10px;
+}
+.cardPlant p{
+    font-family: "Segoe UI";
+}
+
+.cardPlant .details p{
     font-family: "Segoe UI";
     font-weight: 600;
 }
@@ -498,4 +561,12 @@ button:hover span:after {
 
 .info-item b {
     margin-right: 5px;
+}
+
+.title {
+    margin-top: 180px;
+    color: #597e52;
+    text-shadow: 0 0 1px #333333;
+    font-weight: 200;
+    text-align: center;
 }

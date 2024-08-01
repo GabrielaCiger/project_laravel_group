@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class ProductController extends Controller
@@ -12,13 +13,7 @@ class ProductController extends Controller
 
     public function list(): View
     {
-        $plants = [
-          'Monstera',
-          'Caladium',
-          'Syngonium',
-          'Alocasia',
-          'Pilea'
-        ];
+        $plants = DB::select('select * from products');
         return view('product-list', ['plants' => $plants]);
     }
 }
