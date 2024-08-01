@@ -2,6 +2,7 @@
 @section('title', "{$id}")
 @include('components.header')
 
+<body>
 <div class="containerBasic">
     <h1>{{$id}}</h1>
     <div class="containerText">

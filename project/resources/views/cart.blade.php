@@ -2,6 +2,7 @@
 @section('title', 'Cart')
 @include('components.header')
 
+<body>
 
 <div class="containerBasic">
     <h1>Cart</h1>

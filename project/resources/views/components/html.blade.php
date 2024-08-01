@@ -7,4 +7,3 @@
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <title>@yield('title', 'default')</title>
 </head>
-<body>

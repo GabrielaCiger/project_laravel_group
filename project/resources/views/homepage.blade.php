@@ -2,6 +2,7 @@
 @section('title', 'Home')
 @include('components.header')
 
+<body>
     <div class="container">
         <img src="{{ asset('images/monst.jpg') }}" alt="">
         <div class="containerText">

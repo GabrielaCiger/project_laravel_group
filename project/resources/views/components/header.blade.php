@@ -8,6 +8,9 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="main">
+        <a href="/login" class="cart">
+            <img src="{{ asset('images/account.png') }}" alt="cart" width="35px">
+        </a>
         <a href="/cart" class="cart">
             <img src="{{ asset('images/shopping-bag.png') }}" alt="cart" width="35px">
         </a>

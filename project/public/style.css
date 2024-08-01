@@ -9,14 +9,20 @@
     padding: 0px;
     box-sizing: border-box;
     list-style: none;
-    font-family: "Lilita One", sans-serif;
     text-decoration: none;
 }
 
 body, html {
-    height: 100vh;
+    height: 100%;
+    margin: 0px;
     font-family: Poppins-Regular, sans-serif;
     background-color: #f1e4c3;
+    font-family: "Lilita One", sans-serif;
+}
+
+.login {
+    background-image: url('images/leaves.jpg');
+    background-size: cover;
 }
 
 body a
@@ -119,21 +125,22 @@ header
 }
 
 .container {
-    margin-top: 180px;
+    margin-top: 50px;
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: 10px;
+    margin-bottom: -50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
 }
 
 .containerBasic {
     margin-top: 180px;
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,7 +189,6 @@ header
     height: 300px;
     align-items: center;
     background-color: #597e52;
-    margin-top: 50px;
 }
 
 .footer .contain {
@@ -340,4 +346,156 @@ button:hover span:after {
 .containerText ul {
     line-height: 2vw;
     font-size: 20px;
+}
+
+.wrapper{
+    font-family: "Segoe UI";
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    font-family: "Lilita One", sans-serif;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box box-icon{
+    position: absolute;
+    left: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 5px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    font-family: "Lilita One", sans-serif;
+    width: 100%;
+    height: 45px;
+    background: wheat;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+.card{
+    width: 350px;
+    background-color: #FFFFFF;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.card .details{
+    margin: 10px;
+}
+.card p{
+    font-family: "Segoe UI";
+}
+
+.card .details p{
+    font-family: "Segoe UI";
+    font-weight: 600;
+}
+
+.card .details h2 {
+    color: #597e52;
+}
+
+.customer-info {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item b {
+    margin-right: 5px;
 }
