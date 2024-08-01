@@ -1,26 +1,24 @@
 @extends('components.html')
 @include('components.header')
-
-@foreach($product as $item)
-@section('title', $item->name)
+@section('title', $product->name)
 <body>
 <div class="detail">
 <div class="containerCatalog">
     <div class="containerDetail">
     <div class="card">
-        <img src="{{$item->imageUrl}}" alt="Image">
+        <img src="{{$product->imageUrl}}" alt="Image">
         <div class="details">
-            <h2>{{$item->name}}</h2>
-            <p>{{$item->description}}</p>
+            <h2>{{$product->name}}</h2>
+            <p>{{$product->description}}</p>
 
         <div class="customer-info">
             <div class="info-item">
                 <b>Price:</b>
-                <p>{{$item->price}}€</p>
+                <p>{{$product->price}}€</p>
             </div>
             <div class="info-item">
                 <b>Rarity:</b>
-                @if ($item->rarity == 1)
+                @if ($product->rarity == 1)
                     <p>Yes</p>
                 @else
                     <p>No</p>
@@ -28,7 +26,7 @@
             </div>
             <div class="info-item">
                 <b>Category:</b>
-                <p>{{$item->category}}</p>
+                <p>{{$product->category}}</p>
             </div>
         </div>
     </div>
@@ -36,6 +34,5 @@
     </div>
 </div>
 </div>
-@endforeach
 </body>
 @include('components.footer')
