@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
-use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use function Laravel\Prompts\error;
 
 class ProductController extends Controller
 {
@@ -11,14 +11,14 @@ class ProductController extends Controller
     {
         return view('product-details', ['id' => $id]);
     }
-
-    public function list(): View
+    public function sort(string $page = 'name'): View
     {
-//        $plants = Product::orderBy('name', 'asc')->get();
-        $plants = Product::orderBy('price', 'asc')->get();
-        return view('product-list', ['plants' => $plants]);
+            if ($page!='name' && $page!='price') {
+                $page = 'name';
+            }
+            $plantsByPrice = Product::orderBy($page, 'asc')->get();
+            return view('product-list', ['plants' => $plantsByPrice]);
     }
-
     public function showProduct(int $id): View
     {
         $product = Product::findOrFail($id);

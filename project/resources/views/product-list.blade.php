@@ -4,6 +4,14 @@
 
 <body>
 <h1 class="title">Our products</h1>
+<div class="buttons">
+<form action="/products/name" method="get">
+    <button type="submit"><span>Sort by name</span></button>
+</form>
+<form action="/products/price" method="get">
+    <button type="submit"><span>Sort by price</span></button>
+</form>
+</div>
 <div class="containerCatalog">
         @foreach($plants as $plant)
         <form action="/product/{{ $plant->id }}" method="get">
