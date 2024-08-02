@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Lilita+One&family=Poetsen+One&display=swap');
+
+
+.bg-custom {
+    background-color: #59724c;
+}
+
+#illustration {
+    position: absolute;
+    z-index: -2;
+    top: 20vh;
+    right: 20vh;
+    width: 60vh;
+}
+
+h1  {
+    font-family: "Lilita One", sans-serif;
+}

@@ -15,12 +15,15 @@ class LoginController extends Controller
 
         $data = [
             'customer' => [
-                'name' => $request->name,
-                'email' => $request->email,
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
                 'phone' => $request->phone,
                 'newsletter' => $request->newsletter,
             ],
         ];
+
+        // $email = $request->input('newsletter');
+
         return view('profile', $data);
     }
 }

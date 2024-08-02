@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+//use http\Env\Request;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
-use function Laravel\Prompts\error;
 
 class ProductController extends Controller
 {
-    public function show(string $id): View
-    {
-        return view('product-details', ['id' => $id]);
-    }
+
     public function sort(string $page = 'name'): View
     {
             if ($page!='name' && $page!='price') {
-                $page = 'name';
+                $page = 'id';
             }
             $plantsByPrice = Product::orderBy($page, 'asc')->get();
             return view('product-list', ['plants' => $plantsByPrice]);
@@ -23,5 +21,33 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
         return view('product-details', ['product' => $product]);
+    }
+
+    public function destroy($productId)
+    {
+        $product = Product::find($productId);
+        $product->delete();
+        return redirect()->route('backofficeMain')->with('success', 'Product has been deleted');
+    }
+
+    public function store(Request $request){
+        $request->validate([
+            'id',
+            'name' => 'required',
+            'description',
+            'price' => 'required',
+            'imageUrl',
+            'discount',
+            'category',
+            'stock' => 'required',
+            'weight',
+            'height',
+            'rarity'
+        ]);
+        Product::create(request()->all());
+        return redirect()->route('backofficeMain')->with('success', 'Product has been added');
+    }
+    public function create(){
+        return view('create');
     }
 }
