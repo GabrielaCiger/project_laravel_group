@@ -33,7 +33,13 @@
                 </div>
                 <div class="form-group">
                     <label for="category">Category</label>
-                    <input type="text" class="form-control" id="category" name="category" required>
+                    <select class="form-control" id="category" name="category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Basic plants">Basic plants</option>
+                        <option value="Special plants">Special plants</option>
+                        <option value="Books">Books</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="stock"># in Stock</label>
@@ -49,7 +55,11 @@
                 </div>
                 <div class="form-group">
                     <label for="rarity">Rarity</label>
-                    <input type="number" class="form-control" id="rarity" name="rarity" min="0" max="1">
+                    <select class="form-control" id="rarity" name="rarity" required>
+                        <option value="" disabled selected>Select a rarity value</option>
+                        <option value="0">0-No</option>
+                        <option value="1">1-Yes</option>
+                    </select>
                 </div>
                 <div class="container mt-5">
                     <div class="row">

@@ -34,7 +34,13 @@
                 </div>
                 <div class="form-group">
                     <label for="category">Category</label>
-                    <input type="text" class="form-control" id="category" name="category" value="{{ $plant->category }}" required>
+                    <select class="form-control" id="category" name="category" required>
+                        <option value="" disabled>Select a category</option>
+                        <option value="Basic plants" {{ $plant->category == 'Basic plants' ? 'selected' : '' }}>Basic plants</option>
+                        <option value="Special plants" {{ $plant->category == 'Special plants' ? 'selected' : '' }}>Special plants</option>
+                        <option value="Books" {{ $plant->category == 'Books' ? 'selected' : '' }}>Books</option>
+                        <option value="Accessories" {{ $plant->category == 'Accessories' ? 'selected' : '' }}>Accessories</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="stock"># in Stock</label>
@@ -50,7 +56,11 @@
                 </div>
                 <div class="form-group">
                     <label for="rarity">Rarity</label>
-                    <input type="number" class="form-control" id="rarity" name="rarity" min="0" max="1" value="{{ $plant->rarity }}">
+                    <select class="form-control" id="rarity" name="rarity" required>
+                        <option value="" disabled>Select a rarity value</option>
+                        <option value="0" {{ old('category', $plant->rarity) == '0' ? 'selected' : '' }}>0-No</option>
+                        <option value="1" {{ old('category', $plant->rarity) == '1' ? 'selected' : '' }}>1-Yes</option>
+                    </select>
                 </div>
                 <div class="container mt-5">
                     <div class="row">

@@ -8,7 +8,6 @@
                     <li>Mission</li>
                     <li>Services</li>
                     <li>Social</li>
-                    <a href="/backoffice"><li>BACKOFFICE</li></a>
                 </ul>
             </div>
             <div class="col">
@@ -16,6 +15,12 @@
                 <ul>
                     <li>Contact us</li>
                     <li>Web chat</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Admin</h1>
+                <ul>
+                    <a href="/backoffice"><li>Log in</li></a>
                 </ul>
             </div>
         </div>
