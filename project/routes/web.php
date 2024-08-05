@@ -21,6 +21,9 @@ Route::get('cart', [CartController::class, 'showCart']);
 
 Route::get('/backoffice', [AdminController::class, 'show'])->name('backofficeMain');
 
-Route::delete('/backoffice/{productId}', [ProductController::class, 'destroy'])->name('product.destroy');
+Route::delete('/backoffice/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
 Route::get('/backoffice/create', ProductController::class . '@create')->name('product.create');
 Route::post('/backoffice', ProductController::class .'@store')->name('product.store');
+
+Route::get('/backoffice/{id}/edit', ProductController::class .'@edit')->name('product.edit');
+Route::put('/backoffice/{id}', ProductController::class .'@update')->name('product.update');

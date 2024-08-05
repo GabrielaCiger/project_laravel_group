@@ -50,7 +50,8 @@
             @else
                 <td>❌</td>
             @endif
-            <td><form action=""><button class="btn btn-success w-20 py-2 mb-2" type="submit">Edit</button></form> </td>
+            <td>
+                <a href="{{ route('product.edit', $plant->id) }}"><button class="btn btn-success w-20 py-2 mb-2" type="submit">Edit</button></a>
             <td>
                 <form method="post" action="{{ route('product.destroy', $plant->id) }}">
                     @csrf

@@ -23,9 +23,9 @@ class ProductController extends Controller
         return view('product-details', ['product' => $product]);
     }
 
-    public function destroy($productId)
+    public function destroy($id)
     {
-        $product = Product::find($productId);
+        $product = Product::find($id);
         $product->delete();
         return redirect()->route('backofficeMain')->with('success', 'Product has been deleted');
     }
@@ -50,4 +50,27 @@ class ProductController extends Controller
     public function create(){
         return view('create');
     }
+
+    public function update(Request $request, $id){
+        $product = Product::find($id);
+        $product->update($request->only([
+            'name',
+            'description',
+            'price',
+            'imageUrl',
+            'discount',
+            'category',
+            'stock',
+            'weight',
+            'height',
+            'rarity'
+        ]));
+        return redirect()->route('backofficeMain')->with('success', 'Product has been updated');
+    }
+    public function edit($id)
+    {
+        $plant = Product::find($id);
+        return view('editProduct', compact('plant'));
+    }
+
 }
