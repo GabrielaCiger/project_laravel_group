@@ -5,6 +5,10 @@
 <h1 style="color: #f1e4c3;"> Backoffice </h1>
 <img src="{{asset('images/illustration.jpg')}}" alt="illustration de monstera" id="illustration">
 
+<div class="col text-start">
+    <a href="/" class="btn btn-warning mb-4">Log out</a>
+</div>
+
 @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
