@@ -11,6 +11,9 @@
 <form action="/products/price" method="get">
     <button type="submit"><span>Sort by price</span></button>
 </form>
+    <form action="/products/categories" method="get">
+        <button type="submit"><span>See all by category</span></button>
+    </form>
 </div>
 <div class="containerCatalog">
         @foreach($plants as $plant)
