@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 
 // ! must be here
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,7 @@ Route::post('profile', [LoginController::class, 'store']);
 //Catalog, list of products, sorting functions
 Route::get('/', [HomeController::class, 'show']);
 Route::get('products', [ProductController::class, 'sort']);
+Route::get('products/categories', [CategoryController::class, 'list']);
 Route::get('products/{page}', [ProductController::class, 'sort']);
 
 //Show exact product based on GET method
