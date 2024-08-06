@@ -45,8 +45,8 @@
                 <td>❌</td>
             @endif
         <td>{{ $plant->discount }}</td>
-        <td>{{ $plant->category }}</td>
-        <td>{{ $plant->stock }}</td>
+            <td>{{ $plant->category->name }}</td>
+            <td>{{ $plant->stock }}</td>
         <td>{{ $plant->weight }}g</td>
         <td>{{ $plant->height }} cm</td>
             @if(($plant->rarity)==1)

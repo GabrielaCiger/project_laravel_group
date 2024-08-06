@@ -32,13 +32,13 @@
                     <input type="number" class="form-control" id="discount" name="discount">
                 </div>
                 <div class="form-group">
-                    <label for="category">Category</label>
-                    <select class="form-control" id="category" name="category" required>
+                    <label for="category_id">Category</label>
+                    <select class="form-control" id="category_id" name="category_id" required>
                         <option value="" disabled selected>Select a category</option>
-                        <option value="Basic plants">Basic plants</option>
-                        <option value="Special plants">Special plants</option>
-                        <option value="Books">Books</option>
-                        <option value="Accessories">Accessories</option>
+                        <option value="1">Basic plants</option>
+                        <option value="2">Special plants</option>
+                        <option value="3">Books</option>
+                        <option value="4">Accessories</option>
                     </select>
                 </div>
                 <div class="form-group">

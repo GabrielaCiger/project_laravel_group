@@ -26,7 +26,7 @@
             </div>
             <div class="info-item">
                 <b>Category:</b>
-                <p>{{$product->category}}</p>
+                <p>{{$product->category->name}}</p>
             </div>
         </div>
     </div>

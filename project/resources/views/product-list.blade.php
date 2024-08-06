@@ -25,7 +25,7 @@
                     <div class="customer-info">
                         <div class="info-item">
                             <b>Category:</b>
-                            <p>{{$plant->category}}</p>
+                            <p>{{$plant->category->name}}</p>
                         </div>
                     </div>
                     <button class='btn' type="submit"><span>See details</span></button>

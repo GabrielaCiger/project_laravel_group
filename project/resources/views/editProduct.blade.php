@@ -33,13 +33,13 @@
                     <input type="number" class="form-control" id="discount" name="discount" value="{{ $plant->discount }}">
                 </div>
                 <div class="form-group">
-                    <label for="category">Category</label>
-                    <select class="form-control" id="category" name="category" required>
+                    <label for="category_id">Category</label>
+                    <select class="form-control" id="category_id" name="category_id" required>
                         <option value="" disabled>Select a category</option>
-                        <option value="Basic plants" {{ $plant->category == 'Basic plants' ? 'selected' : '' }}>Basic plants</option>
-                        <option value="Special plants" {{ $plant->category == 'Special plants' ? 'selected' : '' }}>Special plants</option>
-                        <option value="Books" {{ $plant->category == 'Books' ? 'selected' : '' }}>Books</option>
-                        <option value="Accessories" {{ $plant->category == 'Accessories' ? 'selected' : '' }}>Accessories</option>
+                        <option value="1" {{ $plant->category_id == 1 ? 'selected' : '' }}>Basic plants</option>
+                        <option value="2" {{ $plant->category_id == 2 ? 'selected' : '' }}>Special plants</option>
+                        <option value="3" {{ $plant->category_id == 3 ? 'selected' : '' }}>Books</option>
+                        <option value="4" {{ $plant->category_id == 4 ? 'selected' : '' }}>Accessories</option>
                     </select>
                 </div>
                 <div class="form-group">

@@ -40,19 +40,32 @@ class ProductController extends Controller
 //            'height',
 //            'rarity'
 //        ]);
-        $data = [
-            'id' => $request->input('id'),
-            'name' => $request->input('name'),
-            'description' => $request->input('description'),
-            'price' => $request->input('price'),
-            'imageUrl' => $request->input('imageUrl'),
-            'discount' => $request->input('discount'),
-            'category' => $request->input('category'),
-            'stock' => $request->input('stock'),
-            'weight' => $request->input('weight'),
-            'height' => $request->input('height'),
-            'rarity' => $request->input('rarity')
-        ];
+//        $data = [
+//            'id' => $request->input('id'),
+//            'name' => $request->input('name'),
+//            'description' => $request->input('description'),
+//            'price' => $request->input('price'),
+//            'imageUrl' => $request->input('imageUrl'),
+//            'discount' => $request->input('discount'),
+//            'category_id' => $request->input('category_id'),
+//            'stock' => $request->input('stock'),
+//            'weight' => $request->input('weight'),
+//            'height' => $request->input('height'),
+//            'rarity' => $request->input('rarity')
+//        ];
+        $data = $request->validate([
+            'id'=>'required|integer',
+            'name'=>'required|string',
+            'description'=>'nullable|string',
+            'price'=>'required|float|min:0',
+            'imageUrl'=>'required',
+            'discount'=>'nullable|integer',
+            'category_id'=>'required|integer',
+            'stock'=>'required|integer|min:0',
+            'weight'=>'nullable|integer',
+            'height'=>'nullable|integer',
+            'rarity'=>'nullable|integer'
+        ]);
         Product::create($data);
         return redirect()->route('backofficeMain')->with('success', 'Product has been added');
     }
@@ -84,7 +97,7 @@ class ProductController extends Controller
             'price' => $request->input('price'),
             'imageUrl' => $request->input('imageUrl'),
             'discount' => $request->input('discount'),
-            'category' => $request->input('category'),
+            'category_id' => $request->input('category_id'),
             'stock' => $request->input('stock'),
             'weight' => $request->input('weight'),
             'height' => $request->input('height'),

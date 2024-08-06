@@ -36,10 +36,9 @@ class AdminController extends Controller
      */
     public function show()
     {
-        $plants = Product::all();
-        return view('admin', ['plants' => $plants]);
+        $plants = Product::with('category')->get();
+        return view('admin', compact('plants'));
     }
-
     public function edit(string $id)
     {
         //
